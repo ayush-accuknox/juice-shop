@@ -46,4 +46,3 @@ jobs:
           path: |
             trivy-report.json
             checkmarx-report.json
-
