@@ -34,6 +34,7 @@ jobs:
       - name: Checkmarx AST CLI Action
         uses: checkmarx/ast-github-action@main
         with:
+          cxAction: ScaScan
           base_uri: https://deu.iam.checkmarx.net/
           cx_tenant: accuknox-nfr
           cx_client_id: Ayush
