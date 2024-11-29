@@ -34,11 +34,15 @@ jobs:
       - name: Checkmarx AST CLI Action
         uses: checkmarx/ast-github-action@main
         with:
+          # base_uri: https://deu.iam.checkmarx.net/
+          # cx_tenant: accuknox-nfr
+          # cx_client_id: Ayush
+          # cx_client_secret: ${{ secrets.CX_CLIENT_SECRET }}
           cxAction: ScaScan
-          base_uri: https://deu.iam.checkmarx.net/
-          cx_tenant: accuknox-nfr
-          cx_client_id: Ayush
-          cx_client_secret: ${{ secrets.CX_CLIENT_SECRET }}
+          cxScaAccount: Ayush
+          cxScaUsername: ayush@accuknox.com
+          cxScaPassword: ${{ secrets.CX_PASSWORD }}
+          cxExecutePackageDependency: true
 
       # Optional: Upload reports as artifact
       - name: Upload scan reports
