@@ -4,10 +4,10 @@ on:
   workflow_dispatch: {}
   push:
     branches:
-      - main
+      - master
   pull_request:
     branches:
-      - main
+      - master
 
 jobs:
   sca-scan:
@@ -35,9 +35,9 @@ jobs:
         uses: checkmarx/ast-github-action@main
         with:
           base_uri: https://deu.iam.checkmarx.net/
-          # cx_tenant: accuknox-nfr
-          # cx_client_id: Ayush
-          # cx_client_secret: ${{ secrets.CX_CLIENT_SECRET }}
+          cx_tenant: accuknox-nfr
+          cx_client_id: Ayush
+          cx_client_secret: ${{ secrets.CX_CLIENT_SECRET }}
           cxAction: ScaScan
           cxScaAccount: Ayush
           cxScaUsername: ayush@accuknox.com
